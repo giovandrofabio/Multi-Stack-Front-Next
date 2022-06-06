@@ -1,4 +1,8 @@
 # Multi-Stack-Front-Next
+Checklist do projeto Front-end da Semana Multi Stack TreinaWeb
+
+🔗 [Repositório - GitHub](https://github.com/treinaweb/treinaweb-workshop-multistack-react-03-pets)
+
 ## Checklist do Ambiente
 
 - [ ]  Instalar Node.js
