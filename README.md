@@ -1,35 +1,115 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 # Multi-Stack-Front-Next
+## Checklist do Ambiente
+
+- [ ]  Instalar Node.js
+    - 📥 [Download](https://nodejs.org/en/)
+    - 🔗 [Guia de Instalação](https://www.treinaweb.com.br/blog/instalacao-do-node-js-windows-mac-e-linux/)
+- [ ]  Instalar VS Code
+    - 📥 [Download](https://code.visualstudio.com/)
+    - 🔗 [Guia de Instalação](https://www.treinaweb.com.br/blog/instalacao-do-vs-code-no-windows-linux-e-macos/)
+- [ ]  Instalar extensão Styled Components
+
+## Checklist da Criação do Projeto
+
+- [ ]  Iniciar o projeto
+    
+    `npx create-next-app pets --ts` 
+    
+- [ ]  Iniciar o servidor
+
+Em caso de erro no Windows, executar:
+
+`Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
+
+## Checklist da Organização do Projeto
+
+- [ ]  Jogar imagens na pasta `public`
+- [ ]  Apagar pasta `api`
+- [ ]  Criar pasta `src` na raiz do projeto
+- [ ]  Jogar pasta `pages` em `src`
+- [ ]  Apagar arquivo `Home.module.css`
+- [ ]  Criar pasta `ui` em  `src`
+- [ ]  Arrastar pasta `styles` para `ui`
+- [ ]  Arrumar caminhos da importação em `index.tsx`
+- [ ]  Arrumar caminhos da importação em `_app.tsx`
+
+## Checklist das Configurações do Projeto
+
+- [ ]  Instalar Material UI
+    
+    `npm i @mui/material @emotion/react @emotion/styled`
+    
+    - [ ]  Configurar tema
+        - [ ]  Criar pasta `themes` em `ui`
+        - [ ]  Criar arquivo do Tema
+        - 🎨 Tema (clique aqui para abrir)
+            
+            ```jsx
+            {
+                palette: {
+                    primary: {
+                        main: '#AE0FEA',
+                    },
+                    secondary: {
+                        main: '#C5C5C5',
+                    },
+                    text: {
+                        primary: '#293845',
+                        secondary: '#9EADBA',
+                    },
+                },
+                typography: {
+                    fontFamily: 'Roboto, sans-serif',
+                },
+                shape: {
+                    borderRadius: '3px',
+                },
+                components: {
+                    MuiButton: {
+                        styleOverrides: {
+                            root: {
+                                textTransform: 'none',
+                                borderRadius: '5px',
+                                fontWeight: 'normal',
+                            },
+                        },
+                    },
+                    MuiPaper: {
+                        styleOverrides: {
+                            root: {
+                                boxShadow: '0px 0px 39px rgba(0, 0, 0, 0.05)',
+                            },
+                        },
+                    },
+                    MuiTextField: {
+                        defaultProps: {
+                            InputLabelProps: {
+                                required: false,
+                            },
+                            required: true,
+                        },
+                    },
+                    MuiTableHead: {
+                        styleOverrides: {
+                            root: {
+                                '& .MuiTableCell-root': {
+                                    fontWeight: 'bold',
+                                },
+                            },
+                        },
+                    },
+                    MuiTableCell: {
+                        styleOverrides: {
+                            root: {
+                                border: '1px solid #D8D8D8',
+                            },
+                        },
+                    },
+                },
+            }
+            ```
+            
+        - [ ]  Adicionar Provider em `_app.tsx`
+- [ ]  Instalar Axios
+    
+    `npm i axios@0.26.0`
